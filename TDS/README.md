@@ -57,6 +57,7 @@ esphome upload tds-esp8266.yaml --device 10.10.50.173
 ```
 
 - OTA 后若 HA 连不上，通常是本机还有 `esphome logs` 占用了 ESP8266 的单个原生 API 连接；关闭日志窗口再刷新设备即可。
+- 若设备当前固件仍使用旧 OTA 密码（例如 `1`），第一次 OTA 前先把 `ota_password` 设为旧值；升级成功后再改成强密码并再次 OTA，否则会认证失败。
 - `compile_process_limit: 1` 是为了避免 HA 主机内存不足时多线程编译被 OOM 杀掉。
 
 ## 5. 掉电保持机制
@@ -99,4 +100,8 @@ ESP8266 默认把 `restore_value` 存在 RTC memory，完全断电会丢。本�
 - TDS 串口帧解析假设帧头 `55 0A 85`、11 字节帧；若换 TDS 模块固件，需重新抓 UART 验证。
 - SNTP 未成功同步前，滤芯天数会显示 0，这是正常保护行为。
 - 本配置面向 ESPHome 2026.11+；旧版 ESPHome 可能不支持 `compile_process_limit` 或 `storage: flash` 写法。
+
+## 8. 参考资料与致谢
+
+硬件思路、UART 协议和 ESPHome 接入方式参考了多个公开项目与文章。作者、原始链接、许可证和离线快照说明见 [REFERENCES.md](REFERENCES.md)。
 
