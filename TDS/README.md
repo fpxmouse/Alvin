@@ -105,3 +105,14 @@ ESP8266 默认把 `restore_value` 存在 RTC memory，完全断电会丢。本�
 
 硬件思路、UART 协议和 ESPHome 接入方式参考了多个公开项目与文章。作者、原始链接、许可证和离线快照说明见 [REFERENCES.md](REFERENCES.md)。
 
+## Support / 请作者喝杯咖啡
+
+如果这份配置帮你省了时间，欢迎扫码请作者喝杯咖啡。二维码已隐去姓名和头像，可直接扫码。
+
+<table>
+  <tr>
+    <td align="center"><b>支付宝</b><br><img src="support/alipay-qr.svg" width="260" alt="Alipay QR Code"></td>
+    <td align="center"><b>微信支付</b><br><img src="support/wechat-pay-qr.svg" width="260" alt="WeChat Pay QR Code"></td>
+  </tr>
+</table>
+
